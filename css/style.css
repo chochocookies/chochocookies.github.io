@@ -1,0 +1,351 @@
+:root {
+    --blue: #1e549f;
+    --indigo: #695aa6;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #ec185d;
+    --orange: #ff6d02;
+    --yellow: #ffc107;
+    --green: #1bb74f;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #393e46;
+    --primary: #695aa6;
+    --secondary: #393e46;
+    --success: #1bb74f;
+    --info: #17a2b8;
+    --warning: #ff6d02;
+    --danger: #ec185d;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --background:#25274d;
+    --fonttext:#aaabb8;
+    --button:#2e9cca;
+    --darkblue:#29648a;
+    --shadow : 1 4px 4px rgb(0 0 0 /5);
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Roboto", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    
+}
+/* nav */
+
+#navbarCollapse .navbar-nav ul{
+    justify-content: space-evenly;
+    background-color: var(--background);
+    list-style: none;
+    
+}
+.navbar a h1 {
+    font-family: 'Handjet', cursive;
+    letter-spacing: 2px;
+    
+}
+
+
+.navbar-nav a.active,
+.navbar-nav a:hover {
+    color:var(--info);
+
+}
+
+.navbar-nav ul li a.active,
+.navbar-nav ul li a:hover {
+    color: var(--light);
+
+}
+
+
+
+
+/* home */
+#home {
+    background-color: var(--background);
+    
+}
+
+.img {
+    justify-content: center;
+    margin-left: 10px;
+    width: 450px;
+    height: auto;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h3 {
+  font-family: 'Handjet', cursive;
+
+}
+
+h1 {
+    font-family: 'Handjet', cursive;
+    font-weight: bolder;
+    color: var(--fonttext);
+}
+
+.typing {
+    font-family: 'Handjet', cursive;
+    font-weight: bolder;
+    color: var(--fonttext);
+    display: inline-block;
+    overflow: hidden;
+    font-size: x-large;
+
+}
+
+.typing span {
+    display: inline-block;
+    border-right: .15em solid white ;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.typing span:last-child {
+    border-right: none;
+}
+
+
+@keyframes typing {
+    from { width: 0;}
+    to { width: 100%;}
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white ;}
+}
+
+/* tulisan typing */
+.typing .typed {
+    animation: typing 2s steps(16, end), blink-caret .75s step-end infinite;
+}
+
+/* hapus tulisan */
+.typing .deleted {
+    animation: deleting 2s steps(16, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes deleting {
+    from { width: 100%; }
+    to { width: 0; }
+}
+
+/* bio */
+#bio h1, #contact h1 {
+    color: var(--fonttext);
+    font-size: 3rem;
+}
+
+#bio h3, p, h6 {
+    color: var(--light);
+}
+
+/* skill */
+#skill h1 {
+    color: var(--fonttext);
+    font-size: 3rem;
+}
+
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* logo */
+.container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: slide-in 17s linear infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  transition: transform 10s ease-in-out;
+  width: calc(100px * 17);
+  will-change: transform;
+}
+
+.icon-container img {
+  width: 100px;
+  height: calc(1vw + 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3rem;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100px * 9));
+  }
+}
+
+
+
+/* projects */
+#projects h1 {
+  color: var(--fonttext);
+  font-size: 3rem;
+}
+
+.projects a {
+  color: var(--fonttext);
+}
+
+
+/* blog */
+#blog h1 {
+  color: var(--fonttext);
+  font-size: 3rem;
+}
+
+
+/* resume */
+#resume h1 {
+  color: var(--fonttext);
+  font-size: 3rem;
+  
+}
+
+
+
+/* contact */
+.contact-form {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .form-title {
+    color: var(--info);
+    justify-content: center;
+  }
+  
+
+  .form-group {
+    color: var(--fonttext);
+    /* max-width: 600px; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    /* margin-left: 25%; */
+    text-align: left;
+    justify-content: center;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+  }
+  
+  input[type=text],
+  input[type=email],
+  textarea {
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+  
+  .btn-submit {
+    display: flex;
+    margin: auto;
+    color: var(--light);
+    background-color:var(--info);
+    padding: 5px 30px;
+    border-radius: 10px;
+    border-color: var(--info);
+  }
+  
+  button {
+    font-family: inherit;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  @keyframes fly-1 {
+    form {
+      transform: translateY(0.1em);
+    }
+    to { transform: translateY(-0.1em);}
+  }
+
+
+/* end */
+/* footer */
+.end {
+  color: var(--light);
+}
+
+.container a:hover {
+  color: var(--light);
+
+}
+
+.end nav ul li {
+  display: inline;
+  padding: 3rem ;
+  text-align: center;
+  justify-content: center;
+}
+
+.end .copy ul {
+  justify-content: center;
+}
